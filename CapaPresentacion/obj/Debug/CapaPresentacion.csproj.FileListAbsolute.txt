@@ -1,0 +1,13 @@
+C:\SisRestaurante\CapaPresentacion\bin\Debug\CapaPresentacion.dll
+C:\SisRestaurante\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\SisRestaurante\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\SisRestaurante\CapaPresentacion\bin\Debug\System.Data.SqlClient.dll
+C:\SisRestaurante\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\SisRestaurante\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\SisRestaurante\CapaPresentacion\bin\Debug\System.Data.SqlClient.xml
+C:\SisRestaurante\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.dll
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.pdb

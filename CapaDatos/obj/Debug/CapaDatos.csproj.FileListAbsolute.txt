@@ -1,0 +1,9 @@
+C:\SisRestaurante\CapaDatos\bin\Debug\CapaDatos.dll
+C:\SisRestaurante\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\SisRestaurante\CapaDatos\bin\Debug\System.Data.SqlClient.dll
+C:\SisRestaurante\CapaDatos\bin\Debug\System.Data.SqlClient.xml
+C:\SisRestaurante\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\SisRestaurante\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\SisRestaurante\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\SisRestaurante\CapaDatos\obj\Debug\CapaDatos.dll
+C:\SisRestaurante\CapaDatos\obj\Debug\CapaDatos.pdb
