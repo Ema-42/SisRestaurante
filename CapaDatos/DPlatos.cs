@@ -9,30 +9,36 @@ using System.Data.SqlClient;
 
 namespace CapaDatos
 {
-    public class DCategoria
+    public class DPlatos
     {
-        private int _Idcategoria;
+        private int _Idplato;
         private string _Nombre;
         private string _Descripcion;
+        private float _Precio;
+        private int _Tiempo;
 
         private string _TextoBuscar;
 
-        public int Idcategoria { get => _Idcategoria; set => _Idcategoria = value; }
+        public int Idplato { get => _Idplato; set => _Idplato = value; }
         public string Nombre { get => _Nombre; set => _Nombre = value; }
         public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
         public string TextoBuscar { get => _TextoBuscar; set => _TextoBuscar = value; }
+        public float Precio { get => _Precio; set => _Precio = value; }
+        public int Tiempo { get => _Tiempo; set => _Tiempo = value; }
 
         //constructor vacio
-        public DCategoria()
+        public DPlatos()
         {
 
         }
         //constructor con parametros
-        public DCategoria(int idcategoria, string nombre, string descripcion, string textobuscar)
+        public DPlatos(int idplato, string nombre, string descripcion, string textobuscar, float precio, int tiempo)
         {
-            this.Idcategoria = idcategoria;
+            this.Idplato = idplato;
             this.Nombre = nombre;
             this.Descripcion = descripcion;
+            this.Precio = precio;
+            this.Tiempo = tiempo;
             this.TextoBuscar = textobuscar;
         }
         //metodos
@@ -53,7 +59,7 @@ namespace CapaDatos
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
                 //el texto comando va ser nuestro procedimiento almacenado
-                SqlCmd.CommandText = "insertar_categoria";
+                SqlCmd.CommandText = "insertar_platos";
                 //indicar que es un proc almacenados
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
