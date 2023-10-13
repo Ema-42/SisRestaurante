@@ -169,7 +169,7 @@ namespace CapaDatos
 
                 //Ejecutamos nuestro comando
 
-                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Elimino el Registro";
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se elimino el Registro";
 
 
             }
