@@ -14,34 +14,35 @@ namespace CapaNegocio
         //Metodo que llama al metodo insertar de la clase dCategroia
         //de la CapaDatos
 
-        public static string Insertar(string nombre, string descripcion)
+        public static string Insertar(string nombre, string descripcion, float precio, int tiempo)
         {
-            //instanciamos
-            DCategoria Obj = new DCategoria();
-            //le enviamos nuestros paramaetros
+            //instanciamos , le enviamos nuestros paramaetros
+            DPlatos Obj = new DPlatos();
             Obj.Nombre = nombre;
             Obj.Descripcion = descripcion;
-
+            Obj.Precio = precio;
+            Obj.Tiempo = tiempo;
             return Obj.Insertar(Obj);
         }
-        //Metodo Edistar que llama al metodo editar de la clase DCategoria
-        //de la CapaDatos
-        public static string Editar(int idcategoria, string nombre, string descripcion)
+        //Metodo Edistar que llama al metodo editar de la clase DCategoria de la CapaDatos
+        public static string Editar(int idplato, string nombre, string descripcion, float precio, int tiempo)
         {
-            DCategoria Obj = new DCategoria();
-            // es el set de DCategoria
-            Obj.Idcategoria = idcategoria;
+            DPlatos Obj = new DPlatos();
+            // es el set de DPLATOS
+            Obj.Idplato = idplato;
             Obj.Nombre = nombre;
             Obj.Descripcion = descripcion;
+            Obj.Precio = precio;
+            Obj.Tiempo = tiempo;
             //le envio el objeto con todos los atributos
             return Obj.Editar(Obj);
         }
-        //Metodo Eliminar que llama al metod eliminar de la clase DCategoria
+        //Metodo Eliminar que llama al metod eliminar de la clase Dplatos
         //de la CapaDatos
-        public static string Eliminar(int idcategoria)
+        public static string Eliminar(int idplato)
         {
-            DCategoria Obj = new DCategoria();
-            Obj.Idcategoria = idcategoria;
+            DPlatos Obj = new DPlatos();
+            Obj.Idplato = idplato;
             return Obj.Eliminar(Obj);
         }
         //Metodo mostrar que llama al metodo mostrar de la clase DCategoria
@@ -49,14 +50,14 @@ namespace CapaNegocio
         public static DataTable Mostrar()
         {
             //instancio Dcategoria y llamo a mi meotodo mostrar
-            return new DCategoria().Mostrar();
+            return new DPlatos().Mostrar();
         }
         //Metodo buscar nombre   que llama al metodo buscar nombre
         //de la clase DCategoria de la CapaDatos
 
         public static DataTable BuscarNombre(string textobuscar)
         {
-            DCategoria Obj = new DCategoria();
+            DPlatos Obj = new DPlatos();
             Obj.TextoBuscar = textobuscar;
             return Obj.BuscarNombre(Obj);
         }

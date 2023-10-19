@@ -42,7 +42,7 @@ namespace CapaDatos
             this.TextoBuscar = textobuscar;
         }
         //metodos
-        public string Insertar(DCategoria Categoria)
+        public string Insertar(DPlatos Plato)
         {
             string rpta = "";
             //instancia a nuestra cadena de conexion
@@ -63,26 +63,38 @@ namespace CapaDatos
                 //indicar que es un proc almacenados
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter ParIdcategoria = new SqlParameter();
-                ParIdcategoria.ParameterName = "@idcategoria";
-                ParIdcategoria.SqlDbType = SqlDbType.Int;
+                SqlParameter ParIdplato = new SqlParameter();
+                ParIdplato.ParameterName = "@idplato";
+                ParIdplato.SqlDbType = SqlDbType.Int;
                 //ya que es un campo autoincremental indicamos que es un parametro de salida
-                ParIdcategoria.Direction = ParameterDirection.Output;
-                SqlCmd.Parameters.Add(ParIdcategoria);
+                ParIdplato.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIdplato);
 
                 SqlParameter ParNombre = new SqlParameter();
                 ParNombre.ParameterName = "@nombre";
                 ParNombre.SqlDbType = SqlDbType.VarChar;
                 ParNombre.Size = 50;
-                ParNombre.Value = Categoria.Nombre;
+                ParNombre.Value = Plato.Nombre;
                 SqlCmd.Parameters.Add(ParNombre);
 
                 SqlParameter ParDescripcion = new SqlParameter();
                 ParDescripcion.ParameterName = "@descripcion";
                 ParDescripcion.SqlDbType = SqlDbType.VarChar;
                 ParDescripcion.Size = 50;
-                ParDescripcion.Value = Categoria.Descripcion;
+                ParDescripcion.Value = Plato.Descripcion;
                 SqlCmd.Parameters.Add(ParDescripcion);
+
+                SqlParameter ParPrecio = new SqlParameter();
+                ParPrecio.ParameterName = "@precio";
+                ParPrecio.SqlDbType = SqlDbType.Float;
+                ParPrecio.Value = Plato.Precio;
+                SqlCmd.Parameters.Add(ParPrecio);
+
+                SqlParameter ParTiempo = new SqlParameter();
+                ParTiempo.ParameterName = "@tiempo";
+                ParTiempo.SqlDbType = SqlDbType.Float;
+                ParTiempo.Value = Plato.Tiempo;
+                SqlCmd.Parameters.Add(ParTiempo);
 
                 //Ejecutamos nuestro comando
 
@@ -100,7 +112,7 @@ namespace CapaDatos
             }
             return rpta;
         }
-        public string Editar(DCategoria Categoria)
+        public string Editar(DPlatos Plato)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -112,28 +124,40 @@ namespace CapaDatos
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "editar_categoria";
+                SqlCmd.CommandText = "editar_platos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter ParIdcategoria = new SqlParameter();
-                ParIdcategoria.ParameterName = "@idcategoria";
-                ParIdcategoria.SqlDbType = SqlDbType.Int;
-                ParIdcategoria.Value = Categoria.Idcategoria;
-                SqlCmd.Parameters.Add(ParIdcategoria);
+                SqlParameter ParIdplato = new SqlParameter();
+                ParIdplato.ParameterName = "@idplato";
+                ParIdplato.SqlDbType = SqlDbType.Int;
+                ParIdplato.Value = Plato.Idplato;
+                SqlCmd.Parameters.Add(ParIdplato);
 
                 SqlParameter ParNombre = new SqlParameter();
                 ParNombre.ParameterName = "@nombre";
                 ParNombre.SqlDbType = SqlDbType.VarChar;
                 ParNombre.Size = 50;
-                ParNombre.Value = Categoria.Nombre;
+                ParNombre.Value = Plato.Nombre;
                 SqlCmd.Parameters.Add(ParNombre);
 
                 SqlParameter ParDescripcion = new SqlParameter();
                 ParDescripcion.ParameterName = "@descripcion";
                 ParDescripcion.SqlDbType = SqlDbType.VarChar;
                 ParDescripcion.Size = 50;
-                ParDescripcion.Value = Categoria.Descripcion;
+                ParDescripcion.Value = Plato.Descripcion;
                 SqlCmd.Parameters.Add(ParDescripcion);
+
+                SqlParameter ParPrecio = new SqlParameter();
+                ParPrecio.ParameterName = "@precio";
+                ParPrecio.SqlDbType = SqlDbType.Float;
+                ParPrecio.Value = Plato.Precio;
+                SqlCmd.Parameters.Add(ParPrecio);
+
+                SqlParameter ParTiempo = new SqlParameter();
+                ParTiempo.ParameterName = "@tiempo";
+                ParTiempo.SqlDbType = SqlDbType.Float;
+                ParTiempo.Value = Plato.Tiempo;
+                SqlCmd.Parameters.Add(ParTiempo);
 
                 //Ejecutamos nuestro comando
 
@@ -151,7 +175,7 @@ namespace CapaDatos
             }
             return rpta;
         }
-        public string Eliminar(DCategoria Categoria)
+        public string Eliminar(DPlatos Plato)
         {
             string rpta = "";
             SqlConnection SqlCon = new SqlConnection();
@@ -163,14 +187,14 @@ namespace CapaDatos
                 //Establecer el Comando
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "eliminar_categoria";
+                SqlCmd.CommandText = "eliminar_platos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter ParIdcategoria = new SqlParameter();
-                ParIdcategoria.ParameterName = "@idcategoria";
-                ParIdcategoria.SqlDbType = SqlDbType.Int;
-                ParIdcategoria.Value = Categoria.Idcategoria;
-                SqlCmd.Parameters.Add(ParIdcategoria);
+                SqlParameter ParIdplatos = new SqlParameter();
+                ParIdplatos.ParameterName = "@idplato";
+                ParIdplatos.SqlDbType = SqlDbType.Int;
+                ParIdplatos.Value = Plato.Idplato;
+                SqlCmd.Parameters.Add(ParIdplatos);
 
                 //Ejecutamos nuestro comando
 
@@ -191,14 +215,14 @@ namespace CapaDatos
         public DataTable Mostrar()
         {
             //enviar el nombre de la tabla 
-            DataTable DtResultado = new DataTable("categoria");
+            DataTable DtResultado = new DataTable("platos");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexion.Cn;
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "mostrar_categoria";
+                SqlCmd.CommandText = "mostrar_platos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
@@ -213,9 +237,9 @@ namespace CapaDatos
             }
             return DtResultado;
         }
-        public DataTable BuscarNombre(DCategoria Categoria)
+        public DataTable BuscarNombre(DPlatos Plato)
         {
-            DataTable DtResultado = new DataTable("categoria");
+            DataTable DtResultado = new DataTable("platos");
             SqlConnection SqlCon = new SqlConnection();
             try
             {
@@ -223,14 +247,14 @@ namespace CapaDatos
                 SqlCommand SqlCmd = new SqlCommand();
                 //usar esa cadena de conexion
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "buscar_categoria";
+                SqlCmd.CommandText = "buscar_platos";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlParameter ParTextoBuscar = new SqlParameter();
                 ParTextoBuscar.ParameterName = "@textobuscar";
                 ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
                 ParTextoBuscar.Size = 50;
-                ParTextoBuscar.Value = Categoria.TextoBuscar;
+                ParTextoBuscar.Value = Plato.TextoBuscar;
                 SqlCmd.Parameters.Add(ParTextoBuscar);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);

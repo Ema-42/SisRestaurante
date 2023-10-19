@@ -14,3 +14,4 @@ C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resources
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmUsuarios.resources
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmPlatos.resources
