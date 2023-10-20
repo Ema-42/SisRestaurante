@@ -15,3 +15,8 @@ C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmCategoria.resou
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmUsuarios.resources
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmPlatos.resources
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmRoles.resources
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmClientes.resources
+C:\SisRestaurante\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmPrincipal.resources
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources

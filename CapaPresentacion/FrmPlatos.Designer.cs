@@ -367,7 +367,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Name = "FrmPlatos";
-            this.Text = "FrmPlatos";
+            this.Text = "Platos";
             this.Load += new System.EventHandler(this.FrmPlatos_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

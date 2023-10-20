@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1f8sArwnF2zfUd8bFU2VHCFXXUgZthwORJx/gkCXa2ybbVHU8tKHq5D09aYt2ObvpRraLpz0wtBQoS5amPTVzw==",
+  "dgSpecHash": "u9ZOLPbkEmjXqXDKJgVfBYQH8Bv2cwnyLCeTHQmYNfLPCDtEBY3HPY/9E1kVUg7rU7jl9KyylHSO8+I2B1jB8Q==",
   "success": true,
   "projectFilePath": "C:\\SisRestaurante\\SisRestaurante\\SisRestaurante.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\emanu\\.nuget\\packages\\fontawesome.sharp\\6.3.0\\fontawesome.sharp.6.3.0.nupkg.sha512",
     "C:\\Users\\emanu\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\emanu\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\emanu\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",

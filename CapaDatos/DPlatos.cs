@@ -14,7 +14,7 @@ namespace CapaDatos
         private int _Idplato;
         private string _Nombre;
         private string _Descripcion;
-        private float _Precio;
+        private decimal _Precio;
         private int _Tiempo;
 
         private string _TextoBuscar;
@@ -23,7 +23,7 @@ namespace CapaDatos
         public string Nombre { get => _Nombre; set => _Nombre = value; }
         public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
         public string TextoBuscar { get => _TextoBuscar; set => _TextoBuscar = value; }
-        public float Precio { get => _Precio; set => _Precio = value; }
+        public decimal Precio { get => _Precio; set => _Precio = value; }
         public int Tiempo { get => _Tiempo; set => _Tiempo = value; }
 
         //constructor vacio
@@ -32,7 +32,7 @@ namespace CapaDatos
 
         }
         //constructor con parametros
-        public DPlatos(int idplato, string nombre, string descripcion, string textobuscar, float precio, int tiempo)
+        public DPlatos(int idplato, string nombre, string descripcion, string textobuscar, decimal precio, int tiempo)
         {
             this.Idplato = idplato;
             this.Nombre = nombre;
@@ -86,13 +86,13 @@ namespace CapaDatos
 
                 SqlParameter ParPrecio = new SqlParameter();
                 ParPrecio.ParameterName = "@precio";
-                ParPrecio.SqlDbType = SqlDbType.Float;
+                ParPrecio.SqlDbType = SqlDbType.Decimal;
                 ParPrecio.Value = Plato.Precio;
                 SqlCmd.Parameters.Add(ParPrecio);
 
                 SqlParameter ParTiempo = new SqlParameter();
                 ParTiempo.ParameterName = "@tiempo";
-                ParTiempo.SqlDbType = SqlDbType.Float;
+                ParTiempo.SqlDbType = SqlDbType.Int;
                 ParTiempo.Value = Plato.Tiempo;
                 SqlCmd.Parameters.Add(ParTiempo);
 
@@ -149,13 +149,13 @@ namespace CapaDatos
 
                 SqlParameter ParPrecio = new SqlParameter();
                 ParPrecio.ParameterName = "@precio";
-                ParPrecio.SqlDbType = SqlDbType.Float;
+                ParPrecio.SqlDbType = SqlDbType.Decimal;
                 ParPrecio.Value = Plato.Precio;
                 SqlCmd.Parameters.Add(ParPrecio);
 
                 SqlParameter ParTiempo = new SqlParameter();
                 ParTiempo.ParameterName = "@tiempo";
-                ParTiempo.SqlDbType = SqlDbType.Float;
+                ParTiempo.SqlDbType = SqlDbType.Int;
                 ParTiempo.Value = Plato.Tiempo;
                 SqlCmd.Parameters.Add(ParTiempo);
 

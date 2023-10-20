@@ -28,3 +28,4 @@ C:\SisRestaurante\SisRestaurante\bin\Debug\net6.0-windows\CapaDatos.pdb
 C:\SisRestaurante\SisRestaurante\bin\Debug\net6.0-windows\CapaNegocio.pdb
 C:\SisRestaurante\SisRestaurante\obj\Debug\net6.0-windows\SisRestaurante.csproj.AssemblyReference.cache
 C:\SisRestaurante\SisRestaurante\obj\Debug\net6.0-windows\SisRestaurante.csproj.CopyComplete
+C:\SisRestaurante\SisRestaurante\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll

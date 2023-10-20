@@ -99,7 +99,6 @@ namespace CapaPresentacion
         //este evento se carga cuando el fomulario se muestra o se carga la vista
         private void FrmPlatos_Load(object sender, EventArgs e)
         {
-            //lo alineamos como querramos
             this.Top = 0;
             this.Left = 0;
 
@@ -151,14 +150,14 @@ namespace CapaPresentacion
                     if (this.IsNuevo)
                     {
                         //insertar un nuevo registro, mandamos los parametros
-                        rpta = NPlatos.Insertar(this.txtNombre.Text.Trim().ToUpper(), this.txtDescripcion.Text.Trim(), float.Parse(this.txtPrecio.Text), Convert.ToInt32(this.txtTiempo.Text));
+                        rpta = NPlatos.Insertar(this.txtNombre.Text.Trim().ToUpper(), this.txtDescripcion.Text.Trim(), Convert.ToDecimal(this.txtPrecio.Text), Convert.ToInt32(this.txtTiempo.Text));
                     }
                     else
                     {
                         //este es el caso de editar un registro
-                        rpta = NCategoria.Editar(Convert.ToInt32(this.txtIdplato.Text),
-                            this.txtNombre.Text.Trim().ToUpper(),
-                            this.txtDescripcion.Text.Trim());
+                        rpta = NPlatos.Editar(Convert.ToInt32(this.txtIdplato.Text),
+                            this.txtNombre.Text.Trim().ToUpper(), this.txtDescripcion.Text.Trim(), 
+                            Convert.ToDecimal(this.txtPrecio.Text), Convert.ToInt32(this.txtTiempo.Text));
                     }
                     //la respuesta que nos devuelve el metodo insertar de DCategoria
                     if (rpta.Equals("OK"))
@@ -199,10 +198,11 @@ namespace CapaPresentacion
         //ir datalistado/eventos/doble click,   para cargar los datos en el formulario y poder editar
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
-            this.txtIdplato.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idcategoria"].Value);
+            this.txtIdplato.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idplato"].Value);
             this.txtNombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
             this.txtDescripcion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["descripcion"].Value);
-
+            this.txtPrecio.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["precio"].Value);
+            this.txtTiempo.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["tiempo"].Value);
             this.tabControl1.SelectedIndex = 1;
         }
         //editar un registro
@@ -280,7 +280,7 @@ namespace CapaPresentacion
                             // guardamos el id
                             Codigo = Convert.ToString(row.Cells[1].Value);
                             //pasar a CapaNegocio ->CapaDatos -> Proc Almacenados
-                            Rpta = NCategoria.Eliminar(Convert.ToInt32(Codigo));
+                            Rpta = NPlatos.Eliminar(Convert.ToInt32(Codigo));
 
                             if (Rpta.Equals("OK"))
                             {
@@ -294,6 +294,7 @@ namespace CapaPresentacion
                     }
                     //cargar los datos
                     this.Mostrar();
+                    chkEliminar.Checked = false;
                 }
             }
             catch (Exception ex)
@@ -301,7 +302,6 @@ namespace CapaPresentacion
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
 
     }
 }

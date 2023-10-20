@@ -47,7 +47,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DCategoria.cs" />
+    <Compile Include="DClientes.cs" />
     <Compile Include="DPlatos.cs" />
+    <Compile Include="DRoles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -46,7 +46,9 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="NCategoria.cs" />
+    <Compile Include="NClientes.cs" />
     <Compile Include="NPlatos.cs" />
+    <Compile Include="NRoles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

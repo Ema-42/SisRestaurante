@@ -14,7 +14,7 @@ namespace CapaNegocio
         //Metodo que llama al metodo insertar de la clase dCategroia
         //de la CapaDatos
 
-        public static string Insertar(string nombre, string descripcion, float precio, int tiempo)
+        public static string Insertar(string nombre, string descripcion, decimal precio, int tiempo)
         {
             //instanciamos , le enviamos nuestros paramaetros
             DPlatos Obj = new DPlatos();
@@ -25,7 +25,7 @@ namespace CapaNegocio
             return Obj.Insertar(Obj);
         }
         //Metodo Edistar que llama al metodo editar de la clase DCategoria de la CapaDatos
-        public static string Editar(int idplato, string nombre, string descripcion, float precio, int tiempo)
+        public static string Editar(int idplato, string nombre, string descripcion, decimal precio, int tiempo)
         {
             DPlatos Obj = new DPlatos();
             // es el set de DPLATOS
