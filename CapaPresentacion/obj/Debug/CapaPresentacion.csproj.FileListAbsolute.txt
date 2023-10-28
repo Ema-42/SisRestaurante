@@ -20,3 +20,4 @@ C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmClientes.resour
 C:\SisRestaurante\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmPrincipal.resources
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaRoles_Usuarios.resources

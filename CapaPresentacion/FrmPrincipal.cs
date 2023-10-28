@@ -102,7 +102,7 @@ namespace CapaPresentacion
 
         private void btnInicio_Click(object sender, EventArgs e)
         { 
-            FormHijoActual.Close();
+            FormHijoActual.Hide();
             Reset();
         }
         //formularios hijos
@@ -111,7 +111,7 @@ namespace CapaPresentacion
             //abrir solo un form
             if (FormHijoActual != null)
             {
-                FormHijoActual.Close();
+                FormHijoActual.Hide();
             }
             FormHijoActual = FormHijo;
             //
@@ -149,6 +149,17 @@ namespace CapaPresentacion
         {
             ActivateButton(remitente, RGBColors.color1);
             AbrirFormHijo(new FrmPlatos());
+        }
+
+        private void btnUsuarios_Click(object remitente, EventArgs e)
+        {
+            ActivateButton(remitente, RGBColors.color1);
+            AbrirFormHijo(FrmUsuarios.GetInstancia());
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }

@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(214, 646);
+            this.panel1.Size = new System.Drawing.Size(214, 823);
             this.panel1.TabIndex = 0;
             // 
             // btnUsuarios
@@ -74,7 +74,7 @@
             this.btnUsuarios.IconColor = System.Drawing.Color.White;
             this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 353);
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 341);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(214, 61);
             this.btnUsuarios.TabIndex = 5;
@@ -82,6 +82,7 @@
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnClientes
             // 
@@ -94,7 +95,7 @@
             this.btnClientes.IconColor = System.Drawing.Color.White;
             this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 292);
+            this.btnClientes.Location = new System.Drawing.Point(0, 280);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(214, 61);
             this.btnClientes.TabIndex = 4;
@@ -115,7 +116,7 @@
             this.btnRoles.IconColor = System.Drawing.Color.White;
             this.btnRoles.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRoles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoles.Location = new System.Drawing.Point(0, 231);
+            this.btnRoles.Location = new System.Drawing.Point(0, 219);
             this.btnRoles.Name = "btnRoles";
             this.btnRoles.Size = new System.Drawing.Size(214, 61);
             this.btnRoles.TabIndex = 3;
@@ -136,7 +137,7 @@
             this.btnPlatos.IconColor = System.Drawing.Color.White;
             this.btnPlatos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPlatos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlatos.Location = new System.Drawing.Point(0, 171);
+            this.btnPlatos.Location = new System.Drawing.Point(0, 159);
             this.btnPlatos.Name = "btnPlatos";
             this.btnPlatos.Size = new System.Drawing.Size(214, 60);
             this.btnPlatos.TabIndex = 2;
@@ -157,7 +158,7 @@
             this.btnCategorias.IconColor = System.Drawing.Color.White;
             this.btnCategorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategorias.Location = new System.Drawing.Point(0, 111);
+            this.btnCategorias.Location = new System.Drawing.Point(0, 99);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(214, 60);
             this.btnCategorias.TabIndex = 1;
@@ -173,16 +174,16 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(214, 111);
+            this.panelMenu.Size = new System.Drawing.Size(214, 99);
             this.panelMenu.TabIndex = 0;
             // 
             // btnInicio
             // 
             this.btnInicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInicio.BackgroundImage")));
             this.btnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInicio.Location = new System.Drawing.Point(61, 23);
+            this.btnInicio.Location = new System.Drawing.Point(71, 18);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(83, 77);
+            this.btnInicio.Size = new System.Drawing.Size(67, 67);
             this.btnInicio.TabIndex = 0;
             this.btnInicio.TabStop = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -195,7 +196,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(214, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(911, 52);
+            this.panel2.Size = new System.Drawing.Size(1337, 52);
             this.panel2.TabIndex = 1;
             // 
             // lblFormHijo
@@ -203,7 +204,7 @@
             this.lblFormHijo.AutoSize = true;
             this.lblFormHijo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormHijo.ForeColor = System.Drawing.Color.White;
-            this.lblFormHijo.Location = new System.Drawing.Point(51, 23);
+            this.lblFormHijo.Location = new System.Drawing.Point(43, 18);
             this.lblFormHijo.Name = "lblFormHijo";
             this.lblFormHijo.Size = new System.Drawing.Size(70, 29);
             this.lblFormHijo.TabIndex = 1;
@@ -227,19 +228,20 @@
             // 
             this.panelEscritorio.Location = new System.Drawing.Point(220, 58);
             this.panelEscritorio.Name = "panelEscritorio";
-            this.panelEscritorio.Size = new System.Drawing.Size(893, 576);
+            this.panelEscritorio.Size = new System.Drawing.Size(1319, 753);
             this.panelEscritorio.TabIndex = 2;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 646);
+            this.ClientSize = new System.Drawing.Size(1551, 823);
             this.Controls.Add(this.panelEscritorio);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();

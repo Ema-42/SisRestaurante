@@ -49,6 +49,7 @@
     <Compile Include="NClientes.cs" />
     <Compile Include="NPlatos.cs" />
     <Compile Include="NRoles.cs" />
+    <Compile Include="NUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

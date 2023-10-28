@@ -50,6 +50,7 @@
     <Compile Include="DClientes.cs" />
     <Compile Include="DPlatos.cs" />
     <Compile Include="DRoles.cs" />
+    <Compile Include="DUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
