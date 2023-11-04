@@ -80,5 +80,13 @@ namespace CapaNegocio
             return Obj.BuscarDocumento(Obj);
         }
 
+        public static DataTable Login(string usuario, string password)
+        {
+            DUsuarios Obj = new DUsuarios();
+            Obj.Usuario = usuario;
+            Obj.Password = password;
+            return Obj.Login(Obj);
+        }
+
     }
 }

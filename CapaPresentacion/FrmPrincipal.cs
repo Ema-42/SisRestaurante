@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,17 @@ namespace CapaPresentacion
 {
     public partial class FrmPrincipal : Form
     {
+        //***********PARA RECIBIR LOS DATOS DEL LOGIN
+
+        public string idusuario = "";
+        public string nombres = "";
+        public string apellidos = "";
+        public string numero_documento = "";
+        public int idrol = 0 ;
+        //*******************************
+
+
+
         //marcar seleccionactual
         private Panel BordeIzqBtn;
         private IconButton BtnActual;
@@ -28,6 +40,7 @@ namespace CapaPresentacion
             BordeIzqBtn = new Panel();
             BordeIzqBtn.Size = new Size(8, 60);
             panelMenu.Controls.Add(BordeIzqBtn);
+            lblNombre2.Text = nombres;
             //Form
             //this.Text = string.Empty;
             //this.ControlBox = false;
@@ -101,9 +114,12 @@ namespace CapaPresentacion
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
-        { 
-            FormHijoActual.Hide();
-            Reset();
+        {
+            if (FormHijoActual != null)
+            {
+                FormHijoActual.Hide();
+                Reset();
+            }
         }
         //formularios hijos
         private void AbrirFormHijo(Form FormHijo)
@@ -160,6 +176,31 @@ namespace CapaPresentacion
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            GestionUsuario();
+            lblNombre2.Text = nombres;
+        }
+
+
+        //controla los accesos al sistema
+        private void GestionUsuario()
+        {
+            //controla los accesos
+            if (idrol == 1 )
+            {
+                this.btnPlatos.Enabled = true;
+                this.btnRoles.Enabled = true;
+                this.btnUsuarios.Enabled = true;
+                this.btnClientes.Enabled = true;
+                this.btnCategorias.Enabled = true;
+            }
+            else if (idrol != 1)
+            {
+                this.btnPlatos.Enabled = true;
+                this.btnRoles.Visible = false;
+                this.btnUsuarios.Visible = false;
+                this.btnClientes.Enabled = true;
+                this.btnCategorias.Visible = false;
+            }
         }
     }
 }

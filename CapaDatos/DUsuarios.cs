@@ -417,6 +417,43 @@ namespace CapaDatos
             return DtResultado;
         }
 
+        //METODO LOGIN PARA ACCEDER AL SISTEMA, SE COMUNICA CON LA BASE DE DATOS
+
+        public DataTable Login (DUsuarios Usuario)
+        {
+            DataTable DtResultado = new DataTable("usuarios");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "login";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParUsuario = new SqlParameter();
+                ParUsuario.ParameterName = "@usuario";
+                ParUsuario.SqlDbType = SqlDbType.VarChar;
+                ParUsuario.Size = 50;
+                ParUsuario.Value = Usuario.Usuario;
+                SqlCmd.Parameters.Add(ParUsuario);
+
+                SqlParameter ParPassword = new SqlParameter();
+                ParPassword.ParameterName = "@password";
+                ParPassword.SqlDbType = SqlDbType.VarChar;
+                ParPassword.Size = 50;
+                ParPassword.Value = Usuario.Usuario;
+                SqlCmd.Parameters.Add(ParPassword);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
 
     }
 
