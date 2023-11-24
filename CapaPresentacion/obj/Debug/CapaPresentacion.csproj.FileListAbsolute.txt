@@ -22,3 +22,7 @@ C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmPrincipal.resou
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.frmVistaRoles_Usuarios.resources
 C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmLogin.resources
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmProductos.resources
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmOrdenes.resources
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FrmVistaCliente_Orden.resources
+C:\SisRestaurante\CapaPresentacion\obj\Debug\CapaPresentacion.FromVistaProducto_Orden.resources

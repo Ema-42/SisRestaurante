@@ -100,8 +100,6 @@ namespace CapaPresentacion
             this.cbRol.Enabled = valor;
             this.txtUsuario.ReadOnly = !valor;
             this.txtPassword.ReadOnly = !valor;
-      
-
         }
 
         //habilitar los botones

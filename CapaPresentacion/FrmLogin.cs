@@ -38,6 +38,7 @@ namespace CapaPresentacion
         {
             //crear variable para recibir lo que debuelve login que es un datatable
             DataTable Datos = CapaNegocio.NUsuarios.Login(this.txtUsuario.Text, this.txtPassword.Text);
+            //MessageBox.Show("Datos: "+ Datos.Rows[0][0].ToString(), "Sistema",MessageBoxButtons.OK, MessageBoxIcon.Error);
             //Evaluar si existe el usuario
             if (Datos.Rows.Count == 0)
             {

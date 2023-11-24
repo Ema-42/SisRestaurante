@@ -82,7 +82,7 @@
             this.tabControl1.Location = new System.Drawing.Point(54, 92);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(727, 346);
+            this.tabControl1.Size = new System.Drawing.Size(871, 468);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
@@ -97,7 +97,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(719, 317);
+            this.tabPage1.Size = new System.Drawing.Size(863, 439);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -117,7 +117,7 @@
             this.dataListado.RowHeadersWidth = 51;
             this.dataListado.RowTemplate.Height = 24;
             this.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListado.Size = new System.Drawing.Size(637, 177);
+            this.dataListado.Size = new System.Drawing.Size(799, 282);
             this.dataListado.TabIndex = 6;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
@@ -162,7 +162,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(379, 21);
+            this.btnBuscar.Location = new System.Drawing.Point(390, 22);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(105, 23);
             this.btnBuscar.TabIndex = 2;
@@ -362,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 474);
+            this.ClientSize = new System.Drawing.Size(982, 622);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);

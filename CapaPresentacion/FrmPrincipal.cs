@@ -202,5 +202,19 @@ namespace CapaPresentacion
                 this.btnCategorias.Visible = false;
             }
         }
+
+        private void iconButton1_Click(object remitente, EventArgs e)
+        {
+            ActivateButton(remitente, RGBColors.color1);
+            AbrirFormHijo(new FrmProductos());
+        }
+
+        private void iconButton2_Click(object remitente, EventArgs e)
+        {
+            ActivateButton(remitente, RGBColors.color1);
+            AbrirFormHijo(FrmOrdenes.GetInstancia());
+            //le pasamos el id del usuario logueado
+            FrmOrdenes.GetInstancia().Idusuario = Convert.ToInt32(this.idusuario);
+        }
     }
 }

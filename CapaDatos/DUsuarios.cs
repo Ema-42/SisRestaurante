@@ -442,7 +442,7 @@ namespace CapaDatos
                 ParPassword.ParameterName = "@password";
                 ParPassword.SqlDbType = SqlDbType.VarChar;
                 ParPassword.Size = 50;
-                ParPassword.Value = Usuario.Usuario;
+                ParPassword.Value = Usuario.Password;
                 SqlCmd.Parameters.Add(ParPassword);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
